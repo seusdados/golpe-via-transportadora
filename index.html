@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-book Interativo | Proteção Contra Golpes – SEUSDADOS</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Navegação -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <img src="Logo Seusdados.png" alt="Logo SEUSDADOS" class="logo-img"/>
+                <div class="brand-tagline">
+                    <span class="brand-tagline">Data Protection Officer</span>
+                </div>
+            </div>
+            <button class="nav-toggle" aria-label="Menu">☰</button>
+            <div class="nav-links">
+                <a href="#cover" class="nav-link active">Início</a>
+                <a href="#contents" class="nav-link">Sumário</a>
+                <a href="#threats" class="nav-link">Ameaças</a>
+                <a href="#anatomy" class="nav-link">Anatomia</a>
+                <a href="#identification" class="nav-link">Identificação</a>
+                <a href="#governance" class="nav-link">Governança</a>
+                <a href="#scoring" class="nav-link">Pontuação</a>
+                <a href="#protocols" class="nav-link">Protocolos</a>
+                <a href="#timeline" class="nav-link">90 Dias</a>
+                <a href="#cases" class="nav-link">Casos</a>
+                <a href="#contact" class="nav-link">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CAPA -->
+    <section id="cover" class="section cover-section">
+        <div class="container cover-wrapper">
+            <div class="cover-main">
+                <img src="Logo Seusdados.png" alt="Logo SEUSDADOS" class="cover-logo"/>
+                <div class="cover-badge">E-book Interativo 2025</div>
+                <h1 class="cover-title">Proteção Contra Golpes em Transportadoras</h1>
+                <p class="cover-subtitle">Guia prático para identificar, prevenir e responder a fraudes logísticas</p>
+                <div class="cover-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">408%</span>
+                        <span class="stat-label">Crescimento 2018-24*</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">1M+</span>
+                        <span class="stat-label">Tentativas/mês 2025*</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">R$ 737Mi</span>
+                        <span class="stat-label">Fraudes Q1-2025*</span>
+                    </div>
+                </div>
+                <button class="btn btn--primary" onclick="scrollToSection('contents')">Começar leitura</button>
+                <p class="source-note">*Fontes: pesquisa SEUSDADOS Consultoria, tendo como fontes Serasa Experian, ANPD, outros</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SUMÁRIO -->
+    <section id="contents" class="section contents-section">
+        <div class="container">
+            <img src="Logo Seusdados.png" alt="Logo SEUSDADOS" class="section-logo"/>
+            <h2 class="section-title">Sumário Interativo</h2>
+            <div class="contents-grid">
+                <button class="content-item" onclick="scrollToSection('threats')">📊 Cenário de Ameaças</button>
+                <button class="content-item" onclick="scrollToSection('anatomy')">🔍 Anatomia dos Golpes</button>
+                <button class="content-item" onclick="scrollToSection('identification')">⚠️ Identificação</button>
+                <button class="content-item" onclick="scrollToSection('governance')">🏢 Governança</button>
+                <button class="content-item" onclick="scrollToSection('scoring')">📋 Sistema de Pontuação</button>
+                <button class="content-item" onclick="scrollToSection('protocols')">🔒 Protocolos</button>
+                <button class="content-item" onclick="scrollToSection('timeline')">📅 Plano 90 Dias</button>
+                <button class="content-item" onclick="scrollToSection('cases')">💼 Casos Práticos</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- AMEAÇAS -->
+    <section id="threats" class="section">
+        <div class="container">
+            <img src="Logo Seusdados.png" alt="Logo SEUSDADOS" class="section-logo"/>
+            <h2 class="section-title">Cenário de Ameaças</h2>
+            <div class="threat-stats">
+                <div class="stat-card highlight">
+                    <h3>408%</h3>
+                    <p>Crescimento dos golpes financeiros (2018-2024)<br><small>Fonte: Pesquisa SEUSDADOS</small></p>
+                </div>
+                <div class="stat-card">
+                    <h3>1+ milhão</h3>
+                    <p>Tentativas de fraude mensais em 2025<br><small>Fonte: Serasa Experian</small></p>
+                </div>
+                <div class="stat-card danger">
+                    <h3>R$ 737 milhões</h3>
+                    <p>Fraudes no e-commerce – 1º tri/2025<br><small>Fonte: E-commerce Brasil</small></p>
+                </div>
+            </div>
+
+            <details class="details-block">
+                <summary>Como os criminosos obtêm seus dados</summary>
+                <ul>
+                    <li>Vazamentos em sites e apps (40% dos incidentes reportados à ANPD)</li>
+                    <li>Compra de bases de dados em fóruns clandestinos</li>
+                    <li>Engenharia social junto a SACs despreparados</li>
+                    <li>Parceiros logísticos sem controles de acesso</li>
+                </ul>
+            </details>
+
+            <details class="details-block">
+                <summary>Por que as transportadoras são vulneráveis</summary>
+                <p>Transportadoras concentram dados pessoais (endereço, telefone, CPF) e status do envio – combinação valiosa para dar credibilidade ao golpe. Em cadeias logísticas complexas, múltiplos prestadores manipulam a mesma etiqueta, aumentando a superfície de ataque.</p>
+            </details>
+
+            <details class="details-block">
+                <summary>Cadeia de responsabilidade no tratamento de dados</summary>
+                <p>Segundo a LGPD, o remetente é "controlador", a transportadora "operadora" e pode haver sub-operadores (hubs regionais). Todos respondem solidariamente em caso de uso indevido, salvo prova de ausência de culpa (Art. 42, §1º).</p>
+            </details>
+
+            <h3 style="text-align:center;margin:48px 0 24px;">Distribuição de Fraudes por Tipo</h3>
+            <div class="chart-container" style="position:relative;height:360px;">
+                <canvas id="fraudChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- ANATOMIA -->
+    <section id="anatomy" class="section anatomy-section">
+        <div class="container">
+            <img src="Logo Seusdados.png" alt="Logo SEUSDADOS" class="section-logo"/>
+            <h2 class="section-title">Anatomia dos Golpes</h2>
+            <p>Entenda passo a passo como as fraudes se materializam e por que funcionam.</p>
+
+            <div class="anatomy-flow">
+                <div class="flow-step"><span class="step-number">1</span><h3>Contato inicial</h3><p>WhatsApp, SMS ou e-mail com dados reais da compra.</p></div>
+                <div class="flow-step"><span class="step-number">2</span><h3>Criação de urgência</h3><p>Ameaça de devolução ou multa se não houver ação imediata.</p></div>
+                <div class="flow-step"><span class="step-number">3</span><h3>Solicitação de pagamento</h3><p>Valores entre R$ 57,00 e R$ 89,90 – cifras que parecem "pequenas".</p></div>
+                <div class="flow-step"><span class="step-number">4</span><h3>Coleta de dados</h3><p>Página falsa captura CPF, cartão e senha.</p></div>
+            </div>
+
+            <h3>Principais Cenários</h3>
+            <div class="scam-grid">
+                <div class="scam-card">
+                    <h4>Taxa Falsa</h4>
+                    <p>Exige pagamento para liberação no SISCOMEX.</p>
+                    <small>Ex. valores recorrentes: R$ 62,87 • R$ 57,00</small>
+                </div>
+                <div class="scam-card">
+                    <h4>Phishing Logístico</h4>
+                    <p>Site clone de rastreio que solicita novas credenciais.</p>
+                </div>
+                <div class="scam-card">
+                    <h4>Leilões Falsos</h4>
+                    <p>Anúncios com 80-90% de desconto para captar pagamento instantâneo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IDENTIFICAÇÃO -->
+    <section id="identification" class="section">
+        <div class="container">
+            <img src="Logo Seusdados.png" alt="Logo SEUSDADOS" class="section-logo"/>
+            <h2 class="section-title">Identificação de Ameaças</h2>
+            <p>Checklist de validação antes de qualquer interação com o cliente.</p>
+            <div class="warning-grid">
+                <div class="warning-card">
+                    <h3>Canais mais explorados</h3>
+                    <ul>
+                        <li>WhatsApp com foto de perfil genérica</li>
+                        <li>SMS usando subdomínios .click / .link</li>
+                        <li>E-mails com domínio similar (ex: <em>correios-br.com</em>)</li>
+                    </ul>
+                </div>
+                <div class="warning-card">
+                    <h3>Red Flags imediatos</h3>
+                    <ul>
+                        <li>Valores quebrados (R$ 62,87)</li>
+                        <li>Prazos inferior a 1 h</li>
+                        <li>Ausência de canais oficiais no rodapé</li>
+                    </ul>
+                </div>
+                <div class="warning-card">
+                    <h3>Como confirmar legitimidade</h3>
+                    <ul>
+                        <li>Buscar código no site oficial (sem clicar no link)</li>
+                        <li>Ligar para SAC da loja ou transportadora</li>
+                        <li>Verificar se a cobrança consta na área do cliente</li>
+                    </ul>
+                </div>
+            </div>
+            <details class="details-block" style="margin-top:32px;">
+                <summary>Exemplos reais de mensagens (comparativo)</summary>
+                <pre><code>⚠️ FRAUDE
+"Olá! Sua encomenda está retida. Pague R$ 62,87 agora: https://rastreio-entrega.click"
+
+✅ OFICIAL
+"Prezado(a) João, sua encomenda 123456-BR foi postada. Acompanhe em nossos canais oficiais."</code></pre>
+            </details>
+        </div>
+    </section>
+
+    <!-- GOVERNANÇA -->
+    <section id="governance" class="section governance-bg">
+        <div class="container">
+            <img src="Logo Seusdados.png" alt="Logo SEUSDADOS" class="section-logo"/>
+            <h2 class="section-title">Governança SEUSDADOS</h2>
+            <p>Como Encarregada pelo Tratamento de Dados Pessoais profissional, contratada pelas empresas para exercer essa função na modalidade as a service, a SEUSDADOS instrumentaliza a jornada de proteção de dados.</p>
+
+            <details class="details-block">
+                <summary>Você já sabe, mas não custa lembrar…</summary>
+                <p>Fundada em 2019, a SEUSDADOS Consultoria é especialista em governança da proteção de dados pessoais, sendo responsável por centenas de programas de governança da privacidade e proteção de dados de oranizações de todos os portes e segmentos de mercado. Atua, ainda, como Encarregada pelo Tratamento de Dados Pessoais profissional - função criada pela LGPD e conhecida popularmente como DPO - Data Protection Officer - para organizações que a contratada no modelo as-a-Service, garantindo conformidade com LGPD, GDPR e normas setoriais.</p>
+            </details>
+
+            <details class="details-block">
+                <summary>Formulário de Conformidade (25 perguntas)</summary>
+                <ul>
+                    <li>Mapeamento de bases de dados pessoais</li>
+                    <li>Política de backup e criptografia</li>
+                    <li>Procedimento de revogação de acesso</li>
+                    <li>Registro de incidentes (Art. 48 LGPD)</li>
+                </ul>
+            </details>
+
+            <details class="details-block">
+                <summary>Sistema de pontuação de parceiros</summary>
+                <p>Pontuação de 0-100 baseada em 4 pilares (Políticas, Tecnologia, Treinamento, Histórico). Faixas:</p>
+                <ul>
+                    <li><strong>80-100</strong> – Classe A (Excelente)</li>
+                    <li><strong>50-79</strong> – Classe B (Adequado)</li>
+                    <li><strong>0-49</strong> – Classe C (Crítico)</li>
+                </ul>
+                <p>Nenhuma empresa é nomeada; apenas médias setoriais são compartilhadas.</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- PONTUAÇÃO (sem ranking) -->
+    <section id="scoring" class="section">
+        <div class="container">
+            <img src="Logo Seusdados.png" alt="Logo SEUSDADOS" class="section-logo"/>
+            <h2 class="section-title">Sistema de Pontuação</h2>
+            <p>Modelo de avaliação contínua utilizado para categorizar parceiros logísticos sem exposição nominal.</p>
+            <div class="classification-grid">
+                <div class="class-card class-a">
+                    <div class="class-header"><span class="class-badge">CLASSE A</span><span class="class-level">Excelente</span></div>
+                    <div class="class-content">
+                        <p>Controles maduros, testes de invasão anuais, treinamento mensal.</p>
+                    </div>
+                </div>
+                <div class="class-card class-b">
+                    <div class="class-header"><span class="class-badge">CLASSE B</span><span class="class-level">Adequado</span></div>
+                    <div class="class-content">
+                        <p>Boas práticas implementadas, porém falhas de logging ou testes esporádicos.</p>
+                    </div>
+                </div>
+                <div class="class-card class-c">
+                    <div class="class-header"><span class="class-badge">CLASSE C</span><span class="class-level">Crítico</span></div>
+                    <div class="class-content">
+                        <p>Ausência de política de backups, múltiplos incidentes sem plano de resposta.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROTOCOLOS -->
+    <section id="protocols" class="section">
+        <div class="container">
+            <img src="Logo Seusdados.png" alt="Logo SEUSDADOS" class="section-logo"/>
+            <h2 class="section-title">Protocolos de Resposta</h2>
+            <p>Scripts detalhados de atendimento e instruções por área.</p>
+
+            <div class="protocols-grid">
+                <div class="protocol-card">
+                    <div class="protocol-header">Atendimento</div>
+                    <div class="protocol-content">
+                        <pre><code>📞 SCRIPT – Cliente <em>não</em> clicou
+"Obrigado por nos alertar. Esta cobrança não é oficial. Não realize pagamento. Registraremos seu relato e enviaremos confirmação em até 2 h."
+
+🔗 SCRIPT – Cliente clicou em link
+"Entendo a situação. Por segurança, recomendo alterar senhas e monitorar seu cartão. Nossa equipe de TI investigará imediatamente."
+
+💳 SCRIPT – Cliente pagou
+"Vamos acionar processo de contestação urgente. Enviaremos protocolo em até 4 h com orientações para seu banco."</code></pre>
+                    </div>
+                </div>
+                <div class="protocol-card">
+                    <div class="protocol-header">TI</div>
+                    <div class="protocol-content">
+                        <ul>
+                            <li>Analisar logs de acesso nos últimos 30 dias</li>
+                            <li>Bloquear domínio reportado via firewall</li>
+                            <li>Coletar evidências e armazenar por 5 anos</li>
+                            <li>Emitir relatório técnico em até 24 h</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="protocol-card">
+                    <div class="protocol-header">Comercial</div>
+                    <div class="protocol-content">
+                        <ul>
+                            <li>Emitir comunicado preventivo aos clientes corporativos</li>
+                            <li>Monitorar redes sociais para uso indevido da marca</li>
+                            <li>Suspender campanhas pagas que utilizem termos de rastreio</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="protocol-card">
+                    <div class="protocol-header">Logística</div>
+                    <div class="protocol-content">
+                        <ul>
+                            <li>Revisar última exportação de etiquetas</li>
+                            <li>Suspender envio de planilhas por e-mail</li>
+                            <li>Auditar acesso de sub-operadores</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <p style="margin-top:24px;">Incidentes de alto impacto devem ser comunicados à ANPD em até <strong>72 h úteis</strong>, conforme Art. 48 da LGPD.</p>
+        </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section id="timeline" class="section timeline-bg">
+        <div class="container">
+            <img src="Logo Seusdados.png" alt="Logo SEUSDADOS" class="section-logo"/>
+            <h2 class="section-title">Plano de Implementação – 90 Dias</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker phase-1">1</div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge">FASE 1 – Dias 1-30</div>
+                        <ul class="timeline-activities">
+                            <li>Mapear parceiros logísticos</li>
+                            <li>Treinar líderes de área</li>
+                            <li>Definir orçamento de proteção</li>
+                            <li>Abrir canal de registro de incidentes</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker phase-2">2</div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge">FASE 2 – Dias 31-60</div>
+                        <ul class="timeline-activities">
+                            <li>Aplicar formulário de conformidade</li>
+                            <li>Classificar parceiros (sem nomes)</li>
+                            <li>Aprimorar controles de acesso</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker phase-3">3</div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge">FASE 3 – Dias 61-90</div>
+                        <ul class="timeline-activities">
+                            <li>Monitoramento contínuo de indicadores</li>
+                            <li>Relatório executivo para diretoria</li>
+                            <li>Plano de reavaliação semestral</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASOS PRÁTICOS -->
+    <section id="cases" class="section">
+        <div class="container">
+            <img src="Logo Seusdados.png" alt="Logo SEUSDADOS" class="section-logo"/>
+            <h2 class="section-title">Casos Práticos</h2>
+            <div class="cases-grid">
+                <div class="case-card">
+                    <div class="case-header"><span class="case-badge danger">CASO TECHMAIS</span></div>
+                    <div class="case-content">
+                        <p><strong>Impacto:</strong> 847 clientes afetados por golpe de Taxa Falsa.</p>
+                        <p><strong>Linha do tempo:</strong> Alerta 09:00 • Notificação ANPD 14:00 • Contenção 18:00.</p>
+                        <p><strong>Resultado:</strong> 92% dos pagamentos contestados com sucesso.</p>
+                        <p><strong>Lição:</strong> Comunicação rápida reduziu o custo potencial em R$ 1,2 mi.</p>
+                    </div>
+                </div>
+                <div class="case-card">
+                    <div class="case-header"><span class="case-badge info">CASO EDUCATIVO</span></div>
+                    <div class="case-content">
+                        <p>Cliente recebeu link suspeito, mas contato imediato com SAC impediu perda financeira.</p>
+                        <p>Solução: script de atendimento bem treinado + verificação de rastreio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contact" class="section contact-bg">
+        <div class="container">
+            <img src="Logo Seusdados.png" alt="Logo SEUSDADOS" class="section-logo section-logo--light"/>
+            <h2 class="section-title">Precisa de apoio especializado?</h2>
+            <p>A equipe SEUSDADOS está pronta para implementar um programa de proteção em até 90 dias.</p>
+            <div class="contact-details">
+                <p>📧 <a href="mailto:dpo@seusdados.com">dpo@seusdados.com</a></p>
+                <p>📞 <a href="tel:11-4040-5552">11-4040-5552</a></p>
+                <p>🌐 <a href="https://www.seusdados.com" target="_blank">seusdados.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <img src="Logo Seusdados.png" alt="Logo SEUSDADOS" class="footer-logo" />
+                <p>&copy; 2025 SEUSDADOS. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+Categoria,Pergunta,Tipo_Resposta,Peso_Pontuacao,Observacoes
+Identificação,1. Razão social e CNPJ da transportadora,Texto obrigatório,0,Dados básicos para identificação
+Identificação,2. Nome e cargo do DPO ou responsável pela proteção de dados,Texto obrigatório,0,Contato direto responsável
+Identificação,3. Canal oficial para comunicação de incidentes de segurança,Texto obrigatório,0,Canal emergencial
+Identificação,4. Possui certificação ISO 27001 vigente?,Sim/Não (10 pontos se SIM),10,Certificação internacional
+Gestão de Dados,5. Quais dados pessoais são coletados dos destinatários?,Lista detalhada obrigatória,5,Mapeamento completo necessário
+Gestão de Dados,6. Como os dados são armazenados (criptografados/não criptografados)?,Múltipla escolha obrigatória,5,Criptografia obrigatória
+Gestão de Dados,7. Por quanto tempo os dados pessoais são mantidos?,Prazo específico obrigatório,5,Política de retenção clara
+Gestão de Dados,8. Os dados são compartilhados com terceiros? Com quem?,Lista detalhada obrigatória,5,Identificar parceiros terceiros
+Gestão de Dados,9. Existe política de minimização de dados implementada?,Sim/Não (5 pontos se SIM),5,Principio da minimização
+Segurança,10. Descreva as medidas de segurança física das instalações,Texto descritivo obrigatório,10,Segurança física adequada
+Segurança,11. Possui firewall e antivírus atualizados?,Sim/Não (5 pontos se SIM),5,Proteção básica necessária
+Segurança,12. Como é feito o controle de acesso aos dados pessoais?,Texto descritivo obrigatório,10,Controles de acesso rigorosos
+Segurança,13. Existe monitoramento de logs e atividades suspeitas?,Sim/Não (5 pontos se SIM),5,Monitoramento proativo
+Segurança,14. Frequência de backups e testes de recuperação,Periodicidade obrigatória,5,Continuidade do negócio
+Governança LGPD,15. Possui DPO nomeado formalmente conforme LGPD?,Sim/Não (15 pontos se SIM),15,Obrigação legal LGPD
+Governança LGPD,16. Política de Privacidade atualizada e publicada?,Sim/Não (5 pontos se SIM),5,Transparência aos titulares
+Governança LGPD,17. Treinamentos sobre LGPD são realizados regularmente?,Sim/Não (5 pontos se SIM),5,Capacitação contínua
+Governança LGPD,18. Existe mapeamento completo dos dados tratados?,Sim/Não (10 pontos se SIM),10,Governança estruturada
+Gestão de Incidentes,19. Possui plano de resposta a incidentes de segurança?,Sim/Não (10 pontos se SIM),10,Preparação para crises
+Gestão de Incidentes,20. Tempo médio para detecção de incidentes,Tempo em horas,5,Agilidade na resposta
+Gestão de Incidentes,21. Histórico de incidentes nos últimos 12 meses,Número obrigatório,0,Histórico de problemas
+Compliance,22. Última auditoria de segurança realizada (data),Data obrigatória,5,Validação externa
+Compliance,23. Possui seguro cibernético contratado?,Sim/Não (5 pontos se SIM),5,Proteção financeira
+Compliance,24. Cumpre regulamentações específicas do setor?,Sim/Não (5 pontos se SIM),5,Conformidade setorial
+Compliance,25. Tem processos em andamento na ANPD?,Sim/Não (0 pontos se SIM - CRÍTICO),-20,CRÍTICO - Desqualifica automaticamente
